@@ -1,18 +1,18 @@
-package servlet;//まだいじってないです。
+package servlet;
 
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import beans.User;
-import control.DiaryManager;
+import beans.Question;
+import control.QuestionManager;
 
 public class QuestionRegistServlet extends HttpServlet{
-
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
@@ -22,21 +22,25 @@ public class QuestionRegistServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
 
+		//文字コードの設定
 		request.setCharacterEncoding("UTF-8");
 
 		//getParameterの引数はjspのnameの中身と同じ
-		String question_title=request.getParameter("title");
-		String question_cpntent=request.getParameter("conent");
+		String teacher_name=request.getParameter("teacher_name");
+		String title=request.getParameter("title");
+		String kind=request.getParameter("kind");
+		String content =request.getParameter("content");
+		String correct_answer = request.getParameter("correct_answer");
 
 		//保持されているユーザー情報を取得する
-		HttpSession session = request.getSession();
-		User user = (User)session.getAttribute("user");
-		int user_id = user.getUser_id();
+		//HttpSession session = request.getSession();
+		//Question question = (question)session.getAttribute("title");
+		//String title = .getTitle();
 
-		DiaryManager manager=new DiaryManager();
+		QuestionManager manager=new QuestionManager();
 
-		//DiaryManagerのRegistメソッドへ
-		manager.Regist(question_title,question_content,user_id);
+		//QuestionManagerのRegistメソッドへ
+		manager.Regist(teacher_name,title,kind,content,correct_answer);
 
 		response.sendRedirect(response.encodeRedirectURL("./top.jsp"));
 	}

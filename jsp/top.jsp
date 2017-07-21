@@ -16,8 +16,8 @@
 <br>
 <br>
 <FORM>
-      <FONT><h2><a href=".//servlet">教師用ページ</a></h></FONT>
-      <FONT><h2><a href=".//servlet">生徒用ページ</a></h></FONT>
+      <FONT><h2><a href="./teacher.jsp">教師用ページ</a></h></FONT>
+      <FONT><h2><a href="./student.jsp">生徒用ページ</a></h></FONT>
 </FORM>
 </div>
 </BODY>
