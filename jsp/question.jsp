@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html;charset=UTF-8"%>
 <html >
 <head>
 
@@ -7,8 +8,12 @@
 <body>
 
 <form method="post" action="./QuestionRegistServlet">
+<p>問題ID</p>
+<input type ="text" name = "id" size="30" maxlength ="10">
 <p>出題者指名<br>
 <input type="text" name="teacher_name" size="30" maxlength="10"></p>
+<p>問題タイトル<br>
+<input type="text"name="title"size="30" maxlength="15"></p>
 <p>種別ラジヲボタン<br>
 <input type="radio" name="kind" value="国語"> 国語
 <input type="radio" name="kind" value="数学"> 数学

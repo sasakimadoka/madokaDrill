@@ -14,15 +14,15 @@ public class AnswerDAO extends DriverAccessor{
 	public void Regist(Answer answer,Connection connection){
 
 		try{
-			String sql = "insert into answer(user_id,student_name,answer,impression,question_id) values(?,?,?,?,?)";
+			String sql = "insert into answer(id,user_id,student_name,answer,impression,question_id) values(?,?,?,?,?)";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 
-			stmt.setString(1,answer.getUser_id());
-			stmt.setString(2,answer.getStudent_name());
-			stmt.setString(3,answer.getAnswer());
-			stmt.setString(4,answer.getImpression());
-			stmt.setInt(5,answer.getQuestion_id());
+			stmt.setInt(1,answer.getId());
+			stmt.setString(2,answer.getUser_id());
+			stmt.setString(3,answer.getStudent_name());
+			stmt.setString(4,answer.getAnswer());
+			stmt.setString(5,answer.getImpression());
 			stmt.executeUpdate();
 
 			stmt.close();
@@ -54,7 +54,6 @@ public class AnswerDAO extends DriverAccessor{
 			answer.setStudent_name( rs.getString("student_name") );
 			answer.setAnswer( rs.getString("answer") );
 			answer.setImpression(rs.getString("impression"));
-			answer.setQuestion_id(rs.getInt("question_id"));
 
 			stmt.close();
 			rs.close();

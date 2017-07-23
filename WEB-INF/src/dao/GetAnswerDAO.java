@@ -10,7 +10,7 @@ import beans.Answer;
 
 public class GetAnswerDAO extends DriverAccessor{
 
-	public ArrayList GetList(int id,Connection connection){
+	public ArrayList<Answer> GetList(int id,Connection connection){
 
 		try{
 			String sql="select * from answer_table where id = ?";
@@ -19,7 +19,7 @@ public class GetAnswerDAO extends DriverAccessor{
 			stmt.setInt(1,id);
 			ResultSet rs=stmt.executeQuery();
 
-			ArrayList list = new ArrayList();
+			ArrayList<Answer> list = new ArrayList<Answer>();
 
 			//登録されている回答の分だけ繰り返す
 			while(rs.next())
@@ -29,7 +29,6 @@ public class GetAnswerDAO extends DriverAccessor{
 				answer.setStudent_name( rs.getString("student_name") );
 				answer.setAnswer( rs.getString("answer") );
 				answer.setImpression( rs.getString("impression") );
-				answer.setQuestion_id( rs.getInt("question_id") );
 				list.add(answer);
 			}
 

@@ -31,7 +31,11 @@ public class QuestionRegistServlet extends HttpServlet{
 		String kind=request.getParameter("kind");
 		String content =request.getParameter("content");
 		String correct_answer = request.getParameter("correct_answer");
-
+		System.out.println(teacher_name);
+		System.out.println(title);
+		System.out.println(kind);
+		System.out.println(content);
+		System.out.println(correct_answer);
 		//保持されているユーザー情報を取得する
 		//HttpSession session = request.getSession();
 		//Question question = (question)session.getAttribute("title");
@@ -42,6 +46,6 @@ public class QuestionRegistServlet extends HttpServlet{
 		//QuestionManagerのRegistメソッドへ
 		manager.Regist(teacher_name,title,kind,content,correct_answer);
 
-		response.sendRedirect(response.encodeRedirectURL("./top.jsp"));
+		response.sendRedirect(response.encodeRedirectURL("./check.jsp"));
 	}
 }

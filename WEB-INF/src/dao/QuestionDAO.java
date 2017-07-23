@@ -22,7 +22,6 @@ public class QuestionDAO extends DriverAccessor{
 				stmt.setString(3,question.getKind());
 				stmt.setString(4,question.getContent());
 				stmt.setString(5,question.getCorrect_answer());
-				stmt.executeUpdate();
 
 				stmt.close();
 
