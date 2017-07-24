@@ -13,15 +13,17 @@ public class QuestionDAO extends DriverAccessor{
 		public void Regist(Question question,Connection connection){
 
 			try{
-				String sql = "insert into answer(teacher_name,title,kind,content,correct_answer) values(?,?,?,?,?)";
+				System.out.println(123);
+				String sql = "insert into question (title,content,correct_answer,kind,teacher_name) values(?,?,?,?,?);";
 
 				PreparedStatement stmt = connection.prepareStatement(sql);
 
-				stmt.setString(1,question.getTeacher_name());
-				stmt.setString(2,question.getTitle());
-				stmt.setString(3,question.getKind());
-				stmt.setString(4,question.getContent());
-				stmt.setString(5,question.getCorrect_answer());
+				stmt.setString(1,question.getTitle());
+				stmt.setString(2,question.getContent());
+				stmt.setString(3,question.getCorrect_answer());
+				stmt.setString(4,question.getKind());
+				stmt.setString(5,question.getTeacher_name());
+				stmt.executeUpdate();
 
 				stmt.close();
 

@@ -29,7 +29,7 @@ package servlet;
 
 			GetQuestionManager manager=new GetQuestionManager();
 
-			//user_idが登録した全ての日記をlistに渡す
+			//先生が登録した全ての問題をlistに渡す
 			ArrayList list = manager.GetList(title);
 
 			//取得したlistをquestion_listと名付けjspに受け渡せる形にする

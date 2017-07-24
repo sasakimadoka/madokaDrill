@@ -8,8 +8,6 @@
 <body>
 
 <form method="post" action="./QuestionRegistServlet">
-<p>問題ID</p>
-<input type ="text" name = "id" size="30" maxlength ="10">
 <p>出題者指名<br>
 <input type="text" name="teacher_name" size="30" maxlength="10"></p>
 <p>問題タイトル<br>

@@ -15,7 +15,7 @@ public class GetQuestionDAO extends DriverAccessor {
 	public ArrayList GetList(String title,Connection connection){
 
 		try{
-			String sql="select * from question_table where title = ?";
+			String sql="select * from question where title = ?";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1,title);
@@ -27,11 +27,10 @@ public class GetQuestionDAO extends DriverAccessor {
 			while(rs.next())
 			{
 				Question question = new Question();
-				question.setId(rs.getInt("id"));
 				question.setTitle( rs.getString("title") );
-				question.setKind( rs.getString("kind") );
 				question.setContent( rs.getString("content") );
 				question.setCorrect_answer(rs.getString("correct_answer"));
+				question.setKind(rs.getString("Kind"));
 				question.setTeacher_name(rs.getString("teacher_name"));
 				list.add(question);
 			}

@@ -14,5 +14,15 @@
 		<url-pattern>/jsp/QuestionRegistServlet</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>GetQuestionServlet</servlet-name>>
+		<servlet-class>servlet.GetQuestionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetQuestionServlet</servlet-name>
+		<url-pattern>/jsp/GetQuestionServlet</url-pattern>
+	</servlet-mapping>
+
+
 
 </web-app>

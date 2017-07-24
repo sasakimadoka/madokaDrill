@@ -16,19 +16,15 @@ ArrayList list =  (ArrayList)request.getAttribute("question-list");
 <SCRIPT language="JavaScript">
 
 </SCRIPT>
-<div align="center">
 <font size="7"  >生徒用ページ■問題一覧■</font>
 <BR>
 <font>表示されている問題：<%=list.size()%>件</font>
-<div/>
 <br>
 <br>
 <br>
 <br>
-<div align="center">
 <FORM>
-<CENTER>
-<TABLE border="0" cellpadding="0">
+<TABLE>
    <TBODY>
       <% for(int i=0;i<list.size();i++){ %>
        <%Question question = (Question)list.get(i);%>
@@ -38,7 +34,6 @@ ArrayList list =  (ArrayList)request.getAttribute("question-list");
       <% } %>
    </TBODY>
 </TABLE>
-</CENTER>
 </FORM>
 </BODY>
 </HTML>

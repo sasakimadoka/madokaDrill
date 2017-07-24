@@ -24,7 +24,7 @@ public class QuestionManager {
 		question.setKind(kind);
 		question.setContent(content);
 		question.setCorrect_answer(correct_answer);
-
+		System.out.println(title);
 
 		QuestionDAO dao = new QuestionDAO();
 		this.connection = dao.createConnection();

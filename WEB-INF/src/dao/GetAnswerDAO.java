@@ -25,9 +25,10 @@ public class GetAnswerDAO extends DriverAccessor{
 			while(rs.next())
 			{
 				Answer answer = new Answer();
+				answer.setTitle(rs.getString("title"));
 				answer.setUser_id( rs.getString("User_id") );
 				answer.setStudent_name( rs.getString("student_name") );
-				answer.setAnswer( rs.getString("answer") );
+				answer.setStudent_answer( rs.getString("student_answer") );
 				answer.setImpression( rs.getString("impression") );
 				list.add(answer);
 			}

@@ -1,26 +1,62 @@
-<html >
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import= "javax.servlet.http.HttpSession" %>
+<%@ page import= "beans.Question" %>
+<%
+Question question = (Question)request.getAttribute("question");
+%>
+<HTML>
 <head>
+<title>問題</title>
+<style type ="text/css">
 
-<title>　■問題回答ページ■</title>
-
+p{
+margin-top:2em;
+margin-right:5em;
+margin-bottom:2em;
+margin-left:5em;
+}
+</style>
 </head>
-<body>
+<body bgcolor="#ccffff">
 
-<form method="post" action="./AnswerRegistServlet">
+<SCRIPT language="JavaScript">
+</SCRIPT>
+<div align="center">
+<font size="7"  >WebDrillシステム</font>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div align="left">
+
+<P>
+<form method="post" action="./AnswerRegistServlet"><br></form>
+<font size="+2"><%=question.getTitle()%></font><br>
 <p>回答者指名<br>
-<input type="int" name="text1" size="30" maxlength="10"></p>
+<input type="string" name="student_name" size="30" ></p>
 <p>回答者ID<br>
-<input type="varchar" name="text2" sizr="30" maxlength="8">
-
-<p>問題内容<br>
-//ここに問題内容を印字したい
+<input type="string" name="user_id" size="30" maxlength="8"></p>
+<br>
+<font size="+2"><%=question.getContent()%></font><br>
+<br>
 <p>回答欄<br>
-<textarea name="text4" cols="20" rows="10"　maxlength='100'></textarea></p>
+<textarea name="answer" cols="20" rows="10"maxlength="100"></textarea ></p>
+<p>感想欄<br>
+<textarea name="impression" cols="20" rows="10"maxlength="200"></textarea ></p>
 
-<p>
-<input type="submit" value="確定する">
-<a href="./student.jsp">戻る</a><br>
-</p>
 
-</body>
-</html>
+<FORM method="POST" action = "./AnswerRegistServlet">
+<input type="hidden" name="title" value="<%=question.getTitle()%>" >
+<input type="submit" value="送信">
+</form>
+
+<FORM method="POST" action = "./GetQuestionServlet">
+<input type="hidden" name="title" value="<%=question.getTitle()%>" >
+<input type="submit" value="問題選択へ戻る">
+</form>
+
+</BODY>
+</HTML>

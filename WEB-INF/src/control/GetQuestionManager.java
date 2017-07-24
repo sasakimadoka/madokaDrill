@@ -25,6 +25,5 @@ public class GetQuestionManager {
 
 		return list;
 	}
-
 }
 

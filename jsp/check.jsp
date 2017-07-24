@@ -9,7 +9,7 @@
 
 </SCRIPT>
 <div align="center">
-<font size="7"  >問題投稿完了</font>
+<font size="7"  >完了しました。</font>
 <br>
 <br>
 <br>

@@ -16,8 +16,8 @@
 <br>
 <br>
 <FORM>
-      <FONT><h2><a href="./question.jsp">問題提出ページ</a></h></FONT>
-      <FONT><h2><a href="./reading.jsp">問題閲覧ページ</a></h></FONT>
+      <FONT><h2><a href="./question.jsp">問題出題ページ</a></h></FONT>
+      <FONT><h2><a href="./reading.jsp">回答閲覧ページ</a></h></FONT>
        <FONT><h2><a href="./top.jsp">戻る</a></h></FONT>
 </FORM>
 </div>
