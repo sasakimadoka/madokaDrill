@@ -14,7 +14,7 @@ public class AnswerDAO extends DriverAccessor{
 	public void Regist(Answer answer,Connection connection){
 
 		try{
-			String sql = "insert into answer(id,titleuser_id,student_name,student_answer,impression) values(?,?,?,?,?,?)";
+			String sql = "insert into answer(id,title,user_id,student_name,student_answer,impression) values(?,?,?,?,?,?)";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 

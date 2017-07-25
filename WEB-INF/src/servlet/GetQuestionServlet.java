@@ -25,6 +25,7 @@ package servlet;
 
 			HttpSession session = request.getSession();
 			Question question = (Question)session.getAttribute("question");
+			//System.out.println(question);
 			String title = question.getTitle();
 
 			GetQuestionManager manager=new GetQuestionManager();

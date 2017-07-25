@@ -27,10 +27,11 @@ public class GetQuestionDAO extends DriverAccessor {
 			while(rs.next())
 			{
 				Question question = new Question();
+				question.setId(rs.getInt("id"));
 				question.setTitle( rs.getString("title") );
 				question.setContent( rs.getString("content") );
 				question.setCorrect_answer(rs.getString("correct_answer"));
-				question.setKind(rs.getString("Kind"));
+				question.setKind(rs.getString("kind"));
 				question.setTeacher_name(rs.getString("teacher_name"));
 				list.add(question);
 			}
