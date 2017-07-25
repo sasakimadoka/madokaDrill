@@ -1,26 +1,39 @@
+<%@ page language="java" contentType="text/html;charset=UTF-8"%>
+<%@ page import= "beans.Question" %>
+<%@ page import= "java.util.ArrayList" %>
+<%
+ArrayList list =  (ArrayList)request.getAttribute("question-list");
+%>
+
 <HTML>
 <head>
 <title>　□生徒用ページ■　</title>
 </head>
+
+
 <body bgcolor="#ccffff">
 
 <SCRIPT language="JavaScript">
 
 </SCRIPT>
-<div align="center">
-<font size="7"  >生徒用ページ</font>
-<br>
+<font size="7"  >生徒用ページ■問題一覧■</font>
+<BR>
+<font>表示されている問題：<%=list.size()%>件</font>
 <br>
 <br>
 <br>
 <br>
 <FORM>
-/*
-   //問題一覧が出るようにしたい//
-      <FONT><h2><a href="./.jsp">ページ</a></h></FONT>
-      <FONT><h2><a href="./top.jsp">戻る</a></h></FONT>
-*/
+<TABLE>
+   <TBODY>
+      <% for(int i=0;i<list.size();i++){ %>
+       <%Question question = (Question)list.get(i);%>
+        <TR>
+         <TD><FONT><a href="./GetQuestionServlet?title=<%=question.getTitle()%>"><%=question.getTitle()%></a></FONT></TD>
+        </TR>
+      <% } %>
+   </TBODY>
+</TABLE>
 </FORM>
-</div>
 </BODY>
 </HTML>

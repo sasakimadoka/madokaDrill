@@ -14,15 +14,16 @@ public class AnswerDAO extends DriverAccessor{
 	public void Regist(Answer answer,Connection connection){
 
 		try{
-			String sql = "insert into answer(user_id,student_name,answer,impression,question_id) values(?,?,?,?,?)";
+			String sql = "insert into answer(id,title,user_id,student_name,student_answer,impression) values(?,?,?,?,?,?)";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
 
-			stmt.setString(1,answer.getUser_id());
-			stmt.setString(2,answer.getStudent_name());
-			stmt.setString(3,answer.getAnswer());
-			stmt.setString(4,answer.getImpression());
-			stmt.setInt(5,answer.getQuestion_id());
+			stmt.setInt(1,answer.getId());
+			stmt.setString(2,answer.getTitle());
+			stmt.setString(3,answer.getUser_id());
+			stmt.setString(4,answer.getStudent_name());
+			stmt.setString(5,answer.getStudent_answer());
+			stmt.setString(6,answer.getImpression());
 			stmt.executeUpdate();
 
 			stmt.close();
@@ -50,11 +51,11 @@ public class AnswerDAO extends DriverAccessor{
 				//rs.getInt テーブルのカラム名を指定してint型で値をとる
 				//rs.getStringならString型で値をとり、answerに入れてる。
 			answer.setId( rs.getInt("id"));
+			answer.setTitle(rs.getString("title"));
 			answer.setUser_id( rs.getString("user_id") );
 			answer.setStudent_name( rs.getString("student_name") );
-			answer.setAnswer( rs.getString("answer") );
+			answer.setStudent_answer( rs.getString("student_answer") );
 			answer.setImpression(rs.getString("impression"));
-			answer.setQuestion_id(rs.getInt("question_id"));
 
 			stmt.close();
 			rs.close();

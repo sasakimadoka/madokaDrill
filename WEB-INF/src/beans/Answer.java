@@ -3,26 +3,29 @@ package beans;
 public class Answer {
 
 	private int id = 0;
-	private String user_id = null;
-	private String student_name = null;
-	private String answer = null;
-	private String impression = null;
-	private int question_id = 0;
+	private String title = null; //int id = 0;//question_idみたいなもん
+	private String user_id = null;//学籍番号
+	private String student_name = null;//名前
+	private String student_answer = null;//答案
+	private String impression = null;//感想
 
 	public Answer(){
 	}
-	public Answer(int id,String user_id, String student_name, String answer,String impression,int question_id) {
+	public Answer(int id,String title,String user_id, String student_name, String student_answer,String impression ){
 		this.id = id;
+		this.title = title;
 		this.user_id = user_id;
 		this.student_name = student_name;
-		this.answer = answer;
+		this.student_answer = student_answer;
 		this.impression = impression;
-		this.question_id = question_id;
 	}
 
-
-	public int getId() {
+	public int getId(){
 		return id;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 
 	public String getUser_id() {
@@ -33,21 +36,20 @@ public class Answer {
 		return student_name;
 	}
 
-	public String getAnswer() {
-		return answer;
+	public String getStudent_answer() {
+		return student_answer;
 	}
 
 	public String getImpression(){
 		return impression;
 	}
 
-	public int getQuestion_id() {
-		return question_id;
+	public int setId(int id){
+		return id;
 	}
 
-
-	public void setId(int id) {
-		this.id = id;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public void setUser_id(String user_id) {
@@ -58,16 +60,12 @@ public class Answer {
 		this.student_name = student_name;
 	}
 
-	public void setAnswer(String answer) {
-		this.answer = answer;
+	public void setStudent_answer(String student_answer) {
+		this.student_answer = student_answer;
 	}
 
 	public void setImpression(String impression){
 		this.impression = impression;
-	}
-
-	public void setQuestion_id(int question_id) {
-		this.question_id = question_id;
 	}
 
 }

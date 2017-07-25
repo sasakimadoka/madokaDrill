@@ -3,12 +3,12 @@ package beans;
 
 public class Question {
 
-	private int id = 0;
-	private String title = null;
-	private String content = null;
-	private String correct_answer = null;
-	private String kind = null;
-	private String teacher_name = null;
+	private int id = 0;//question_idみたいなもん
+	private String title = null;//タイトル
+	private String content = null;//内容
+	private String correct_answer = null;//解答例
+	private String kind = null;//種別
+	private String teacher_name = null;//先生の名前
 
 	public Question(){
 	}

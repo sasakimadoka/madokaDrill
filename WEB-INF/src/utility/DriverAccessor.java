@@ -5,8 +5,8 @@ import java.sql.SQLException;
 
 public class DriverAccessor {
 
-	//kerachの部分が使用するDBの名前
-	private final static String DRIVER_URL="jdbc:mysql://localhost:3306/kerach?useUnicode=true&characterEncoding=Windows-31J";
+	//madokaDrillの部分が使用するDBの名前
+	private final static String DRIVER_URL="jdbc:mysql://localhost:3306/WebDrill?useUnicode=true&characterEncoding=Windows-31J";
 
 	private final static String DRIVER_NAME="com.mysql.jdbc.Driver";
 

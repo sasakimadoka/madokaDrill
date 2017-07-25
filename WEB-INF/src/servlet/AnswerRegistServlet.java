@@ -9,10 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import beans.Question;
-import control.QuestionManager;
+import beans.Answer;
+import control.AnswerManager;
 
-public class QuestionRegistServlet extends HttpServlet{
+public class AnswerRegistServlet extends HttpServlet{
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
@@ -26,26 +26,26 @@ public class QuestionRegistServlet extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 
 		//getParameterの引数はjspのnameの中身と同じ
-		String teacher_name=request.getParameter("teacher_name");
-		String title=request.getParameter("title");
-		String kind=request.getParameter("kind");
-		String content =request.getParameter("content");
-		String correct_answer = request.getParameter("correct_answer");
-		
-		System.out.println(teacher_name);
+		String title =request.getParameter("title");
+		String student_name=request.getParameter("student_name");
+		String user_id = request.getParameter("user_id");
+		String student_answer = request.getParameter("student_answer");
+		String impression = request.getParameter("impression");
+
 		System.out.println(title);
-		System.out.println(kind);
-		System.out.println(content);
-		System.out.println(correct_answer);
+		System.out.println(student_name);
+		System.out.println(user_id);
+		System.out.println(student_answer);
+		System.out.println(impression);
 		//保持されているユーザー情報を取得する
 		//HttpSession session = request.getSession();
 		//Question question = (question)session.getAttribute("title");
 		//String title = .getTitle();
 
-		QuestionManager manager=new QuestionManager();
+		AnswerManager manager=new AnswerManager();
 
-		//QuestionManagerのRegistメソッドへ
-		manager.Regist(teacher_name,title,kind,content,correct_answer);
+		//AnswerManagerのRegistメソッドへ
+		manager.Regist(title,student_name,user_id,student_answer,impression);
 
 		response.sendRedirect(response.encodeRedirectURL("./check.jsp"));
 	}
