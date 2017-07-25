@@ -11,13 +11,14 @@ public class GetQuestionManager {
 
 	public GetQuestionManager() {
 	}
-	public ArrayList GetList(String title) {
+	public ArrayList GetList() {
 
 		GetQuestionDAO dao = new GetQuestionDAO();
 
 		this.connection = dao.createConnection();
 		//System.out.println(title.get(0));
-		ArrayList list = dao.GetList(title,this.connection);
+		ArrayList list = dao.GetList(this.connection);
+
 
 		dao.closeConnection(this.connection);
 

@@ -12,16 +12,16 @@ import beans.Question;
 
 public class GetQuestionDAO extends DriverAccessor {
 
-	public ArrayList GetList(String title,Connection connection){
+	public ArrayList GetList(Connection connection){
 
 		try{
-			String sql="select * from question where title = ?";
+			String sql="select * from question";
 
 			PreparedStatement stmt = connection.prepareStatement(sql);
-			stmt.setString(1,title);
 			ResultSet rs=stmt.executeQuery();
 
 			ArrayList list = new ArrayList();
+
 
 			//登録されている問題の数だけ繰り返す
 			while(rs.next())

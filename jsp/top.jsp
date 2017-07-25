@@ -14,7 +14,6 @@
 <br>
 <br>
 <br>
-<br>
 <FORM>
       <FONT><h2><a href="./teacher.jsp">教師用ページ</a></h2></FONT>
 
