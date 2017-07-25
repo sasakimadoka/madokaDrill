@@ -28,7 +28,7 @@ ArrayList list =  (ArrayList)request.getAttribute("question-list");
       <% for(int i=0;i<list.size();i++){ %>
        <%Question question = (Question)list.get(i);%>
         <TR>
-         <TD><FONT><a href="./GetQuestionServlet?title=<%=question.getTitle()%>"><%=question.getTitle()%></a></FONT></TD>
+         <TD><FONT><a href="./QuestionReadServlet?title=<%=question.getTitle()%>"><%=question.getTitle()%></a></FONT></TD>
         </TR>
       <% } %>
    </TBODY>
