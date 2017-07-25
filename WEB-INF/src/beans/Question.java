@@ -10,6 +10,7 @@ public class Question {
 	private String kind = null;//種別
 	private String teacher_name = null;//先生の名前
 
+
 	public Question(){
 	}
 	public Question(int id,String title, String content, String correct_answer,String kind,String teacher_name) {

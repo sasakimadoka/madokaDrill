@@ -10,7 +10,6 @@ ArrayList list =  (ArrayList)request.getAttribute("question-list");
 <title>　□生徒用ページ■　</title>
 </head>
 
-
 <body bgcolor="#ccffff">
 
 <SCRIPT language="JavaScript">

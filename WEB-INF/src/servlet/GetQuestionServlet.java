@@ -12,26 +12,26 @@ package servlet;
 	import control.GetQuestionManager;
 
 	public class GetQuestionServlet extends HttpServlet{
-
 		public void doGet(HttpServletRequest request,HttpServletResponse response)
 				throws ServletException,IOException{
 			doPost(request,response);
 		}
+
 
 		public void doPost(HttpServletRequest request,HttpServletResponse response)
 				throws ServletException,IOException{
 
 			request.setCharacterEncoding("UTF-8");
 
-			HttpSession session = request.getSession();
-			Question question = (Question)session.getAttribute("question");
+			//HttpSession session = request.getSession();
+			//Question question = (Question)session.getAttribute("question");
 			//System.out.println(question);
-			String title = question.getTitle();
+			//String id = question.getId();
 
 			GetQuestionManager manager=new GetQuestionManager();
 
 			//先生が登録した全ての問題をlistに渡す
-			ArrayList list = manager.GetList(title);
+			ArrayList list = manager.GetList();
 
 			//取得したlistをquestion_listと名付けjspに受け渡せる形にする
 			request.setAttribute("question-list",list);
