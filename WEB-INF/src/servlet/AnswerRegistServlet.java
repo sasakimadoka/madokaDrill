@@ -32,11 +32,6 @@ public class AnswerRegistServlet extends HttpServlet{
 		String student_answer = request.getParameter("student_answer");
 		String impression = request.getParameter("impression");
 
-		System.out.println(title);
-		System.out.println(student_name);
-		System.out.println(user_id);
-		System.out.println(student_answer);
-		System.out.println(impression);
 		//保持されているユーザー情報を取得する
 		//HttpSession session = request.getSession();
 		//Question question = (question)session.getAttribute("title");

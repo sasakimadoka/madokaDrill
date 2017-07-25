@@ -25,7 +25,6 @@ public class AnswerManager {
 		answer.setUser_id(user_id);
 		answer.setStudent_answer(student_answer);
 		answer.setImpression(impression);
-		System.out.println(title);
 
 		AnswerDAO dao = new AnswerDAO();
 		this.connection = dao.createConnection();

@@ -32,6 +32,14 @@
 		<url-pattern>/jsp/QuestionReadServlet</url-pattern>
 	</servlet-mapping>
 
+<servlet>
+		<servlet-name>AnswerRegistServlet</servlet-name>>
+		<servlet-class>servlet.AnswerRegistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AnswerRegistServlet</servlet-name>
+		<url-pattern>/jsp/AnswerRegistServlet</url-pattern>
+	</servlet-mapping>
 
 
 
