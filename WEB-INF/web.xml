@@ -23,6 +23,17 @@
 		<url-pattern>/jsp/GetQuestionServlet</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>QuestionReadServlet</servlet-name>>
+		<servlet-class>servlet.QuestionReadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuestionReadServlet</servlet-name>
+		<url-pattern>/jsp/QuestionReadServlet</url-pattern>
+	</servlet-mapping>
+
+
+
 
 
 </web-app>

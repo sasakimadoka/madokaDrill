@@ -9,7 +9,7 @@ public class GetAnswerManager {
 
 	private Connection connection = null;
 
-	public GetAnswerManager() {
+public GetAnswerManager() {
 	}
 	public ArrayList GetList(String user_id) {
 
