@@ -26,6 +26,14 @@ public class AnswerManager {
 		answer.setStudent_answer(student_answer);
 		answer.setImpression(impression);
 
+		System.out.println(title);
+		System.out.println(student_name);
+		System.out.println(user_id);
+		System.out.println(student_answer);
+		System.out.println(impression);
+
+
+
 		AnswerDAO dao = new AnswerDAO();
 		this.connection = dao.createConnection();
 

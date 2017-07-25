@@ -38,12 +38,13 @@ margin-left:5em;
 <div align="left">
 
 <P>
-<form method="post" action="./AnswerRegistServlet"><br></form>
+<form method="post" action="./AnswerRegistServlet"><br>
 <font size="+2"><%=question.getTitle()%></font><br>
+<input type="hidden" name="title" value="<%=question.getTitle()%>" >
 <p><br>
 <font size = "+2"><%=question.getTeacher_name()%></font></p>
 <p>回答者指名<br>
-<input type="string" name="student_name" size="30" ></p>
+<input type="string" name="student_name" size="30" maxlength="15"></p>
 <p>回答者ID<br>
 <input type="string" name="user_id" size="30" maxlength="8"></p>
 <br>
