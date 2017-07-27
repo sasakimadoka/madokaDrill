@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <HTML>
 <head>
@@ -15,10 +16,11 @@
 <br>
 <br>
 <br>
+
 <FORM>
       <FONT><h2><a href="./question.jsp">問題出題ページ</a></h></FONT>
       <FONT><h2><a href="./serch.jsp">人で検索するページ</a></h></FONT>
-       <FONT><h2><a href="./top.jsp">戻る</a></h></FONT>
+      <FONT><h2><a href="./top.jsp">戻る</a></h></FONT>
 </FORM>
 </div>
 </BODY>

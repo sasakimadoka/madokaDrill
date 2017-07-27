@@ -3,6 +3,7 @@ package control;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+import beans.Answer;
 import dao.GetAnswerDAO;
 
 public class GetAnswerManager {
@@ -25,5 +26,35 @@ public GetAnswerManager() {
 
 		return list;
 	}
+
+
+	public Answer Select(String user_id){
+
+		GetAnswerDAO dao = new GetAnswerDAO();
+		this.connection = dao.createConnection();
+
+		Answer answer = dao.Select(user_id, this.connection);
+
+		dao.closeConnection(this.connection);
+
+		this.connection = null;
+
+		return answer;
+	}
+
+	public Answer Read(String title){
+
+		GetAnswerDAO dao = new GetAnswerDAO();
+		this.connection = dao.createConnection();
+
+		Answer answer = dao.Read(title, this.connection);
+
+		dao.closeConnection(this.connection);
+
+		this.connection = null;
+
+		return answer;
+	}
+
 }
 

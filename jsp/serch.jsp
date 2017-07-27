@@ -1,39 +1,51 @@
-<%@ page language="java" contentType="text/html;charset=UTF-8"%>
-<%@ page import= "beans.Answer" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import= "javax.servlet.http.HttpSession" %>
+<%@ page import= "beans.Question" %>
 <%@ page import= "java.util.ArrayList" %>
 <%
-ArrayList list =  (ArrayList)request.getAttribute("answer-list");
+Question question = (Question)request.getAttribute("question");
+%>
+<%
+ArrayList list =  (ArrayList)request.getAttribute("question-list");
 %>
 
 <HTML>
 <head>
-<title>　□生徒用ページ■　</title>
+<title>問題</title>
+<style type ="text/css">
+
+p{
+margin-top:2em;
+margin-right:5em;
+margin-bottom:2em;
+margin-left:5em;
+}
+</style>
 </head>
-
-
 <body bgcolor="#ccffff">
 
 <SCRIPT language="JavaScript">
-
 </SCRIPT>
-<font size="7"  >回答検索ページ</font>
-<BR>
-<font>表示されている問題：<%=list.size()%>件</font>
+<div align="center">
+<font size="7"  >WebDrillシステム</font>
+</div>
 <br>
 <br>
 <br>
 <br>
-<FORM>　//全然わからない検索ページの作り方
-<TABLE>
-   <TBODY>
-      <% for(int i=0;i<list.size();i++){ %>
-       <%Question question = (Question)list.get(i);%>
-        <TR>
-         <TD><FONT><a href="./GetQuestionServlet?title=<%=question.getTitle()%>"><%=question.getTitle()%></a></FONT></TD>
-        </TR>
-      <% } %>
-   </TBODY>
-</TABLE>
-</FORM>
+<br>
+
+<div align="left">
+
+<P>
+<form method="post" action="./SerchAnswerServlet"><br>
+<p>ID検索<br>
+<input type="string" name="user_id" size="30" maxlength="8"></p>
+
+<FORM method="POST" action = "./SerchAnswerServlet">
+<input type="submit" value="送信">
+<FONT><h2><a href="./teacher.jsp">戻る</a></h></FONT>
+</form>
+
 </BODY>
 </HTML>

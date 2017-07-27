@@ -9,7 +9,7 @@
 
 </SCRIPT>
 <div align="center">
-<font size="7"  >完了しました。</font>
+<font size="7"  ></font>
 <br>
 <br>
 <br>

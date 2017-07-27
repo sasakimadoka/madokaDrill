@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <HTML>
 <head>
@@ -20,5 +21,6 @@
       <FONT><h2><a href="./GetQuestionServlet">生徒用ページ</a></h2></FONT>
 </FORM>
 </div>
+
 </BODY>
 </HTML>
